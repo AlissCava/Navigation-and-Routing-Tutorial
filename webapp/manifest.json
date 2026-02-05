@@ -63,7 +63,7 @@
 				"dataSource": "employeeRemote"
 			}
 		},
-    	"routing": {
+		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"type": "View",
@@ -72,25 +72,25 @@
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"transition": "slide",
-        "bypassed": {
-          "target": "notFound"
-        },
+				"bypassed": {
+					"target": "notFound"
+				},
 				"async": true
 			},
 			"routes": [{
 				"pattern": "",
 				"name": "appHome",
 				"target": "home"
-			},{
+			}, {
 				"pattern": "employees",
 				"name": "employeeList",
 				"target": "employees"
-      }, {
+			}, {
 				"pattern": "employees/{employeeId}",
 				"name": "employee",
 				"target": "employee"
 			}, {
-				"pattern": "employees/{employeeId}/resume",
+				"pattern": "employees/{employeeId}/resume:?query:",
 				"name": "employeeResume",
 				"target": "employeeResume"
 			}],
@@ -100,11 +100,11 @@
 					"name": "Home",
 					"level" : 1
 				},
-        "notFound": {
-          "id": "notFound",
-          "name": "NotFound",
-          "transition": "show"
-        },
+				"notFound": {
+					"id": "notFound",
+					"name": "NotFound",
+					"transition": "show"
+				},
 				"employees": {
 					"id": "employeeList",
 					"path": "sap.ui.demo.nav.view.employee",
